@@ -25,7 +25,7 @@ public class HttpServer
 public:
     // Constructor
 	HttpServer();
-    // Deprecate copy constructors
+    // Delete copy constructors
     HttpServer(const HttpServer&) = delete;
     HttpServer& operator=(const HttpServer&) = delete;
     // Destructor
@@ -33,7 +33,7 @@ public:
     // Start the http server
     void Start();
     // Close the http server
-    void Close();
+    void Shutdown();
     // Get the server status
     int GetServerStatus();
     // Get the current number of clients
