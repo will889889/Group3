@@ -6,29 +6,28 @@ found in the LICENSE file. See the AUTHORS file for names of contributors.
  */
 #ifndef SHORTLINK_SRC_PARSER_H_
 #define SHORTLINK_SRC_PARSER_H_
+#include <sstream>
 #include <string>
 
-namespace shortlink
-{
+namespace shortlink {
 
 // forward declare
 class RequestData;
 class SURL;
 
-// This class represents a operation that can translate raw message to executable information of a request.
-// Example:
+// This class represents a operation that can translate raw message to
+// executable information of a request. Example:
 //    Parser pars = Parser();
 //    RequestData reqData = pars.Parse(raw_data);
-class Parser
-{
-public:
-	Parser();
-	~Parser();
+class Parser {
+ public:
+  Parser();
+  ~Parser();
 
-	// Parses the formated request data from the raw string.
-	RequestData Parse(const std::string &rawData);
+  // Parses the formated request data from the raw string.
+  static RequestData Parse(const std::string &rawData);
 };
 
-} // namespace shortlink
+}  // namespace shortlink
 
-#endif // SHORTLINK_SRC_PARSER_H_
+#endif  // SHORTLINK_SRC_PARSER_H_
