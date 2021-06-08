@@ -23,7 +23,7 @@ class RequestData {
   // Default constructor, all memeber variables would be 0 or "";
   RequestData();
   // Constructor that sets all the memeber variables with the parameters.
-  RequestData(const std::string _target, const RequestType _requestMethod);
+  RequestData(const std::string tar, const RequestType method);
   // Default destructor
   ~RequestData();
 
